@@ -1,5 +1,51 @@
 # HCMUS Master AI
 
+## Perceptron
+
+Basic building block of neuron networks. Use for supervised learning of binary
+classifiers.
+
+Steps:
+
+- Input `xi` with weight `wi`
+- Sum: `w0 + w1*x1 + ... + wi*xi`
+- Activation function
+- Output
+
+Can represent basic bool: AND, OR, NAND, NOR,... but can not represent XOR
+because can not divide XOR by a line which cross (0, 0) aka not linearly
+separable.
+
+Delta Learning Rule:
+
+- Init randomly
+- Calculate ...
+- Compare with desired output
+- If wrong re-update weight: `wi = wi + delta wi`
+
+Gradient descent:
+
+Use error function. ???
+
+See:
+
+- [What is Perceptron: A Beginners Guide for Perceptron](https://www.simplilearn.com/tutorials/deep-learning-tutorial/perceptron)
+
+### Multi Layer Perceptron (MLP)
+
+Single perceptron can only handle linear, but MLP can handle non-linear easily.
+
+Controlled parameters. ???
+
+Full connected ???
+
+Sigmoid function ???
+
+Back propagation:
+
+- Init weight with small value
+- Calculate ???
+
 ## Learning problems
 
 ### Supervised learning
