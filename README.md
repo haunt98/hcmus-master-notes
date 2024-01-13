@@ -117,8 +117,8 @@ Use for:
 
 - Deepfake detection
 
-## Advance learning
+## Programming
 
-### Federated learning
+### References
 
-### Explainable AI (XAI)
+- [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
