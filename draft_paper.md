@@ -96,6 +96,12 @@ inputs to generate coherent image (and text) outputs.
 - Flexibility: Decides whether to retrieve or generate an image based on the
   input and context.
 
+### Method
+
+- Learning to process images
+- Learning to produce images
+- Decide to generate (new) or retrive (already exist) image
+
 ### Dataset
 
 - Conceptual Captions 3M (CC3M) is a new dataset consisting of ~3.3M images
