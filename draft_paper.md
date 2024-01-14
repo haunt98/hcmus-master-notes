@@ -1,5 +1,8 @@
 # Draft paper to read
 
+- [Conference rankings](http://portal.core.edu.au/conf-ranks/)
+- [Journal rankings](https://www.scimagojr.com/)
+
 ## [Detecting Deepfakes Without Seeing Any](https://paperswithcode.com/paper/detecting-deepfakes-without-seeing-any)
 
 Date: 2023-11-02
@@ -71,6 +74,8 @@ license, ...?
 ## [Generating Images with Multimodal Language Models](https://jykoh.com/gill)
 
 Date: 2023-10-13
+
+Conference: [NeurIPS, 2023](https://neurips.cc/virtual/2023/papers.html)
 
 ### Proposed
 
