@@ -70,7 +70,7 @@ license, ...?
 
 ## [Generating Images with Multimodal Language Models](https://jykoh.com/gill)
 
-Date: 20231013
+Date: 2023-10-13
 
 ### Proposed
 
