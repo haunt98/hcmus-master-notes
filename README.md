@@ -60,8 +60,47 @@ Steps:
 
 - Define goal and reward system.
 - Trial and error by taking action then observing results.
+  - **Partial observation** of state of the world.
+  - Then pick one of possible actions -> let environment change from one state
+    to another.
 - Learning by adapting behavior based on collected rewards.
 - Reaching goal by maximizing rewards.
+
+Concepts:
+
+- State `s` is a **complete** description of state of the world.
+- Observation `o` is a **partial** description of a state.
+  - Fully or partially observable environment: like chess or poke.
+- Action space: all valid actions in given environment.
+  - Discrete action space: finite number of moves are available like chess
+    moves.
+  - Continuous action space: defined by real-valued parameters like robot arm
+    movement.
+  - Hybrid: combine discrete and continuous.
+- Policy: map given state -> action to be taken.
+  - Can be simple function, dictionary or search process.
+  - Deterministic policy: always same output action given same input state.
+  - Stochastic policy: output a probability distribution over the possible
+    actions.
+  - Finding the optimal policy is the core challenge of reinforcement learning.
+- Trajectory is a sequence status and actions (s0, a1, s1, a1, ...)
+- Rewards usually numeric values sent from the environment.
+  - Reward signal: reward function (st, st, s(t+1)), maybe stochastic function.
+  - Finite-horizon undiscounted return: sum rewards in fixed window of steps.
+  - Infinite-horizon discounted return: sum rewards but reward in the future get
+    discount depends on how far off in the future.
+- Expected return:
+  - Consider choice of policy and any reward measure.
+  - Select a policy which maximizes expected return.
+- Value of a state is total amout reward an agents **hope** to accumulate in the
+  future.
+  - Value function may find most suitable solution for specific contexts that
+    have trade-off.
+  - We care about value than reward, of course determine value is harder than
+    reward.
+- Model of environment: how environment will behave.
+  - Model-free methods: trial-and-error learning.
+  - Model-based methods: use models and planning.
 
 Keys:
 
@@ -72,6 +111,13 @@ Good at:
 - Games like chess, go.
 
 **Monte Carlo tree search**: combine tree search and random sampling.
+
+**Markove Deision Processes (MDP)**
+
+- Framework for planning and maximizing your future gains in scenarios where
+  some things are out of your control but you still have choices to make.
+- The future state only depends on the current state and the action taken, not
+  on the history of previous states and actions
 
 ## Learning techniques
 
