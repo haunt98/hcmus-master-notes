@@ -168,3 +168,21 @@ Use for:
 ### References
 
 - [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
+
+## ?? Học tổ hợp
+
+Condorcet's Jury
+
+Majority Voting
+
+- Weak leaner
+- Comnine weak learner to strong learner
+- Learn bias and variance
+
+Occam's Razor
+
+Adaboost
+
+### References
+
+- [AdaBoost: A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting*](https://www.sciencedirect.com/science/article/pii/S002200009791504X)
