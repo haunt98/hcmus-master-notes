@@ -1,5 +1,51 @@
 # HCMUS Master AI
 
+## Decision Tree
+
+Decision Trees are often used to answer that kind of question: given a labelled
+dataset, how should we classify new samples?
+
+- Labelled: Our dataset is labelled because each point has a class (color): blue
+  or green.
+- Classify: To classify a new datapoint is to assign a class (color) to it.
+
+How to train/build a decision tree: Determine the root node ...
+
+Intuitively, we want a decision node that makes a “good” split, where “good” can
+be loosely defined as separating different classes as much as possible.
+
+Entropy can be roughly thought of as how much variance the data has. For
+example:
+
+- A dataset of only blues would have very low (in fact, zero) entropy.
+- A dataset of mixed blues, greens, and reds would have relatively high entropy.
+
+**Information Gain** = how much Entropy we removed
+
+Information Gain is calculated for a split by subtracting the weighted entropies
+of each branch from the original entropy. When training a Decision Tree using
+these metrics, the best split is chosen by **maximizing** Information Gain.
+
+Information Gain Ratio: to avoid bias toward multi-branch splits.
+
+**Pruning tree**: remove branches.
+
+Why?
+
+- Less complex, easier to understand.
+- Classify faster.
+
+How?
+
+- Pre-pruning: stop growing tree early.
+- Post-pruning: grow full tree then remove branches.
+
+### References
+
+- [A Simple Explanation of Information Gain and Entropy](https://victorzhou.com/blog/information-gain/)
+- [A Simple Explanation of Gini Impurity](https://victorzhou.com/blog/gini-impurity/)
+- [Random Forests for Complete Beginners](https://victorzhou.com/blog/intro-to-random-forests/)
+
 ## Perceptron
 
 Basic building block of neuron networks. Use for supervised learning of binary
@@ -16,22 +62,34 @@ Can represent basic bool: AND, OR, NAND, NOR,... but can not represent XOR
 because can not divide XOR by a line which cross (0, 0) aka not linearly
 separable.
 
-Delta Learning Rule:
+Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 
-- Init randomly
-- Calculate ...
-- Compare with desired output
+- Init randomly weight
 - If wrong re-update weight: `wi = wi + delta wi`
 
 Gradient descent:
 
-Use error function. ???
+- Start at random point
+- Calculate the slope (gradient) at that point
+- Move in the direction of the negative gradient
+- Stop when reach local minimum
 
-See:
+Delta rule: based on gradient descent.
+
+- Calculate error
+- Use error to calculate delta for each weight
+- Update weight, moving closer to desired output
+
+Loss function (Hàm lỗi) (Hàm mất mát):
+
+### References
 
 - [What is Perceptron: A Beginners Guide for Perceptron](https://www.simplilearn.com/tutorials/deep-learning-tutorial/perceptron)
+- [Bài 9: Perceptron Learning Algorithm](https://machinelearningcoban.com/2017/01/21/perceptron/)
+- [Bài 7: Gradient Descent (phần 1/2)](https://machinelearningcoban.com/2017/01/12/gradientdescent/)
+- [Bài 8: Gradient Descent (phần 2/2)](https://machinelearningcoban.com/2017/01/16/gradientdescent2/)
 
-### Multi Layer Perceptron (MLP)
+## Multi Layer Perceptron (MLP)
 
 Single perceptron can only handle linear, but MLP can handle non-linear easily.
 
@@ -70,7 +128,7 @@ Concepts:
 
 - State `s` is a **complete** description of state of the world.
 - Observation `o` is a **partial** description of a state.
-  - Fully or partially observable environment: like chess or poke.
+  - Fully or partially observable environment: like chess or poker.
 - Action space: all valid actions in given environment.
   - Discrete action space: finite number of moves are available like chess
     moves.
@@ -118,6 +176,8 @@ Good at:
   some things are out of your control but you still have choices to make.
 - The future state only depends on the current state and the action taken, not
   on the history of previous states and actions
+
+**Model-Based Learning**
 
 ## Learning techniques
 
