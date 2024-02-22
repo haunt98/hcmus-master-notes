@@ -67,14 +67,14 @@ Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 - Init randomly weight
 - If wrong re-update weight: `wi = wi + delta wi`
 
-Gradient descent:
+**Gradient Descent**
 
 - Start at random point
 - Calculate the slope (gradient) at that point
 - Move in the direction of the negative gradient
 - Stop when reach local minimum
 
-Delta rule: based on gradient descent.
+**Delta Rule**: based on gradient descent
 
 - Calculate error
 - Use error to calculate delta for each weight
@@ -87,7 +87,6 @@ Loss function (Hàm lỗi) (Hàm mất mát):
 - [What is Perceptron: A Beginners Guide for Perceptron](https://www.simplilearn.com/tutorials/deep-learning-tutorial/perceptron)
 - [Bài 9: Perceptron Learning Algorithm](https://machinelearningcoban.com/2017/01/21/perceptron/)
 - [Bài 7: Gradient Descent (phần 1/2)](https://machinelearningcoban.com/2017/01/12/gradientdescent/)
-- [Bài 8: Gradient Descent (phần 2/2)](https://machinelearningcoban.com/2017/01/16/gradientdescent2/)
 
 ## Multi Layer Perceptron (MLP)
 
@@ -98,7 +97,7 @@ Single perceptron can only handle linear, but MLP can handle non-linear easily.
 - If input is large, output is close to 1
 - If input is small, output is close to 0
 
-Back propagation:
+**Back Propagation**
 
 - Init weight with small value
 - At each layer
@@ -112,6 +111,40 @@ Back propagation:
 ### References
 
 - [Bài 14: Multi-layer Perceptron và Backpropagation](https://machinelearningcoban.com/2017/02/24/mlp/)
+
+## Adam Algorithm
+
+Gradient Descent with Momentum: like physics, to bypass unwanted local minimum
+to reach another local minimum.
+
+Nesterov Accelerated Gradient (NAG): improve Momentum.
+
+Why? Momentum, when go near local minimum, will slow down for a while, danging
+near local minimum. NAG will help Momentum to converge faster to reach local
+minimum.
+
+The idea is look ahead 1 step. Instead of using current position, use next
+position to calculate gradient.
+
+Adaptive Learning Rate: learning rate is updated during training.
+
+AdaGrad (Adaptive Gradient Algorithm)
+
+- Adapt learning rate by scaling them inversely proportional to the sum of the
+  historical squared values of the gradient
+- Sum of history squared values will be big then learning rate will be small.
+
+RMSProp: improve AdaGrad
+
+- Change gradient accumulation into exponentially weighted moving average (use
+  decay rate)
+- Converges rapidly when applied to convex function
+
+Adam (Adaptive Moment): combine RMSProp with Momentum
+
+### References
+
+- [Bài 8: Gradient Descent (phần 2/2)](https://machinelearningcoban.com/2017/01/16/gradientdescent2/)
 
 ## Learning problems
 
