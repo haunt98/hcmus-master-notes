@@ -93,16 +93,25 @@ Loss function (Hàm lỗi) (Hàm mất mát):
 
 Single perceptron can only handle linear, but MLP can handle non-linear easily.
 
-Controlled parameters. ???
+**Sigmoid function**: convert input to output in [0, 1]
 
-Full connected ???
-
-Sigmoid function ???
+- If input is large, output is close to 1
+- If input is small, output is close to 0
 
 Back propagation:
 
 - Init weight with small value
-- Calculate ???
+- At each layer
+  - Calculate weighted sum of inputs
+  - Apply activation function
+- Continue until reach output layer
+- Backward Pass (Backpropagation)
+  - Calculate using error function
+  - Update weight
+
+### References
+
+- [Bài 14: Multi-layer Perceptron và Backpropagation](https://machinelearningcoban.com/2017/02/24/mlp/)
 
 ## Learning problems
 
