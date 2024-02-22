@@ -142,9 +142,19 @@ RMSProp: improve AdaGrad
 
 Adam (Adaptive Moment): combine RMSProp with Momentum
 
+> Moreover, in areas where the gradient (the slope of the loss function) changes
+> rapidly or unpredictably, Adam takes smaller, more cautious steps. This helps
+> avoid overshooting the minimum. Instead, in areas where the gradient changes
+> slowly or predictably, it takes larger steps. This adaptability is key to
+> Adam’s efficiency, as it navigates the loss landscape more intelligently than
+> algorithms with a fixed step size.
+
 ### References
 
+- [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980)
 - [Bài 8: Gradient Descent (phần 2/2)](https://machinelearningcoban.com/2017/01/16/gradientdescent2/)
+- [The Math Behind the Adam Optimizer](https://towardsdatascience.com/the-math-behind-adam-optimizer-c41407efe59b)
+- [Adam Optimization Algorithm (C2W2L08)](https://www.youtube.com/watch?v=JXQT_vxqwIs)
 
 ## Learning problems
 
