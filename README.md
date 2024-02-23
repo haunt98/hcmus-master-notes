@@ -164,6 +164,74 @@ Adam (Adaptive Moment): combine RMSProp with Momentum
 - [The Math Behind the Adam Optimizer](https://towardsdatascience.com/the-math-behind-adam-optimizer-c41407efe59b)
 - [Adam Optimization Algorithm (C2W2L08)](https://www.youtube.com/watch?v=JXQT_vxqwIs)
 
+## Bagging and Boosting (Ensemble Learning)
+
+> Boosting is the problem of using the notion of weak learning and boost the
+> performance of weak learners to a strong learne
+
+- Bias: how wrong the expected prediction is, systematic error due to wrong
+  asumption
+  - Low bias: fewer assumptions, model match closely training dataset
+  - High bias: more assumptions, model match less closely training dataset, can
+    not capture the complexity, structure in the data
+  - The lower the training error, the lower the bias. The higher the training
+    error, the higher the bias.
+- Variance: the amount of variability in the predictions, how much it can adjust
+  to the new, unseen dataset
+  - Low variance: the model is less sensitive to changes in the training data
+    and can produce **consistent** estimates of the target function with
+    different subsets of data from the same distribution
+  - High variance: the model is very sensitive to changes in the training data
+    and can result in significant changes in the estimate of the target function
+    when trained on different subsets of data from the same distribution. Fit
+    the **quirk** of the data you sample.
+  - We want the variance to express how consistent a certain machine learning
+    model is in its predictions when compared across similar datasets
+  - When talking about the variance of a **particular** model, we always talk
+    about one model, but **multiple** datasets. In practice, you would compare
+    the model error on the training dataset and the error on the testing (or
+    validation) dataset.
+
+- Simple model: high bias, low variance
+- Complex model: low bias, high variance
+
+Weak learner: slightly better than random guessing (p > 0.5)
+
+**Bagging** (Bootstrap Aggregating): run weak leaners independently from each
+other in parallel and combines them following some kind of deterministic
+averaging process
+
+- Sample dataset with replacement into new multiple datasets (resamples or
+  bootstrap samples)
+- Use weak learner to train on each bootstrap
+- Combine predictions using majority vote (classification) or average
+  (regression)
+- Does not reduce bias but reduce variance
+- Naive mixture (all members weighted equally) -> can be improved by weighted
+  ensembling
+
+**Boosting**
+
+- Train sequentially, each time focusing on what previous got wrong, focus its
+  efforts on the most difficult observations
+- Weighted training set, classifier “tries harder” on examples with higher cost
+
+**AdaBoost** (Adaptive Boosting)
+
+- At each iteration, re-weight the training samples by assigning larger weights
+  to samples (data points) that were classified **incorrectly**
+- Train a new base classifier based on the re-weighted samples
+- Add it to the ensemble of classifiers with an appropriate weight
+  - The better a weak learner performs, the more it contributes to the strong
+    learner
+- Repeat
+
+### References
+
+- [AdaBoost: A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting](https://www.sciencedirect.com/science/article/pii/S002200009791504X)
+- [Ensemble methods: bagging, boosting and stacking](https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205)
+- [Bias, Variance, and Overfitting Explained, Step by Step](https://machinelearningcompass.com/model_optimization/bias_and_variance/)
+
 ## Learning problems
 
 ### Supervised learning
@@ -288,21 +356,3 @@ Use for:
 ### References
 
 - [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
-
-## ?? Học tổ hợp
-
-Condorcet's Jury
-
-Majority Voting
-
-- Weak leaner
-- Comnine weak learner to strong learner
-- Learn bias and variance
-
-Occam's Razor
-
-Adaboost
-
-### References
-
-- [AdaBoost: A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting*](https://www.sciencedirect.com/science/article/pii/S002200009791504X)
