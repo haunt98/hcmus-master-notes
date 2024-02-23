@@ -82,11 +82,14 @@ Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 
 Loss function (Hàm lỗi) (Hàm mất mát):
 
+- Mean Square Error (MSE)
+
 ### References
 
-- [What is Perceptron: A Beginners Guide for Perceptron](https://www.simplilearn.com/tutorials/deep-learning-tutorial/perceptron)
 - [Bài 9: Perceptron Learning Algorithm](https://machinelearningcoban.com/2017/01/21/perceptron/)
 - [Bài 7: Gradient Descent (phần 1/2)](https://machinelearningcoban.com/2017/01/12/gradientdescent/)
+- [Optimization: Stochastic Gradient Descent](https://cs231n.github.io/optimization-1/)
+- [What is Perceptron: A Beginners Guide for Perceptron](https://www.simplilearn.com/tutorials/deep-learning-tutorial/perceptron)
 
 ## Multi Layer Perceptron (MLP)
 
@@ -111,6 +114,10 @@ Single perceptron can only handle linear, but MLP can handle non-linear easily.
 ### References
 
 - [Bài 14: Multi-layer Perceptron và Backpropagation](https://machinelearningcoban.com/2017/02/24/mlp/)
+- [Yes you should understand backprop](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b)
+- [Backpropagation, Intuitions](https://cs231n.github.io/optimization-2/)
+- [CS231n Winter 2016: Lecture 4: Backpropagation, Neural Networks 1](https://www.youtube.com/watch?v=i94OvYb6noo)
+- [CS231n Winter 2016: Lecture 5: Neural Networks Part 2](https://www.youtube.com/watch?v=gYpoJMlgyXA)
 
 ## Adam Algorithm
 
@@ -151,8 +158,9 @@ Adam (Adaptive Moment): combine RMSProp with Momentum
 
 ### References
 
-- [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980)
+- [An overview of gradient descent optimization algorithms](https://arxiv.org/abs/1609.04747)
 - [Bài 8: Gradient Descent (phần 2/2)](https://machinelearningcoban.com/2017/01/16/gradientdescent2/)
+- [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980)
 - [The Math Behind the Adam Optimizer](https://towardsdatascience.com/the-math-behind-adam-optimizer-c41407efe59b)
 - [Adam Optimization Algorithm (C2W2L08)](https://www.youtube.com/watch?v=JXQT_vxqwIs)
 
