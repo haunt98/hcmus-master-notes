@@ -232,13 +232,7 @@ averaging process
 - [Ensemble methods: bagging, boosting and stacking](https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205)
 - [Bias, Variance, and Overfitting Explained, Step by Step](https://machinelearningcompass.com/model_optimization/bias_and_variance/)
 
-## Learning problems
-
-### Supervised learning
-
-### Unsupervised learning
-
-### Reinforcement learning
+## Reinforcement learning
 
 Agent learn to interact environment based on **feedback** signals.
 
@@ -307,52 +301,9 @@ Good at:
 
 **Model-Based Learning**
 
-## Learning techniques
-
-### Multi-task learning
-
-Instead of buiding separate models for each task, Multi-task learning use single
-model with shared layers.
-
-### Active learning
-
-### Online learning
-
-Model is updated as new data arrives rather then waiting for final decision (the
-end, which can never happen)
-
-### Transfer learning
-
-Model learning from one problem then applied to **different but related**
-problem.
-
-Use for:
-
-- Classifier
-- Feature extractor
-- Weight initialization
-
-### Ensemble learning
-
-Combine multi predictions from multi models aka base learners then output final
-prediction.
-
-Types:
-
-- Bagging: majority votes over minority.
-- Boosting: weighting votes.
-- Stacking: meta-models to learn from votes.
-
-Random Forest
-
-AdaBoost
-
-Use for:
-
-- Deepfake detection
-
 ## Programming
 
 ### References
 
+- [NumPy fundamentals](https://numpy.org/doc/stable/user/basics.html)
 - [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
