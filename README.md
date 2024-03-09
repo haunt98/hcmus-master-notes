@@ -127,7 +127,9 @@ Quirk:
 - [CS231n Winter 2016: Lecture 5: Neural Networks Part 2](https://www.youtube.com/watch?v=gYpoJMlgyXA)
 - [Activation Functions: Sigmoid vs Tanh](https://www.baeldung.com/cs/sigmoid-vs-tanh-functions)
 
-## Adam Algorithm
+## Gradient Descent Optimizer
+
+> Gradient indicate the direction of the steepest increase.
 
 Gradient Descent with Momentum: like physics, to bypass unwanted local minimum
 to reach another local minimum.
@@ -143,19 +145,23 @@ position to calculate gradient.
 
 Adaptive Learning Rate: learning rate is updated during training.
 
+- High learning rate: move quickly, may overshoot the minimum, unstable converge
+- Low learning rate: move slowly, may stuck in local minimum, slow converge
+
 AdaGrad (Adaptive Gradient Algorithm)
 
 - Adapt learning rate by scaling them inversely proportional to the sum of the
   historical squared values of the gradient
 - Sum of history squared values will be big then learning rate will be small.
 
-RMSProp: improve AdaGrad
+RMSProp: improve AdaGrad by adding decay factor.
 
 - Change gradient accumulation into exponentially weighted moving average (use
   decay rate)
 - Converges rapidly when applied to convex function
 
-Adam (Adaptive Moment): combine RMSProp with Momentum
+Adam (Adaptive Moment): get ability to adapt gradident from RMSProp and speed
+from Momentum.
 
 > Moreover, in areas where the gradient (the slope of the loss function) changes
 > rapidly or unpredictably, Adam takes smaller, more cautious steps. This helps
@@ -171,6 +177,7 @@ Adam (Adaptive Moment): combine RMSProp with Momentum
 - [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980)
 - [The Math Behind the Adam Optimizer](https://towardsdatascience.com/the-math-behind-adam-optimizer-c41407efe59b)
 - [Adam Optimization Algorithm (C2W2L08)](https://www.youtube.com/watch?v=JXQT_vxqwIs)
+- [Gradient descent, how neural networks learn | Chapter 2, Deep learning](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 
 ## Bagging and Boosting (Ensemble Learning)
 
@@ -340,14 +347,15 @@ Good at:
 - Selection: Using tree policy
   - Need to balance between exploration and exploitation
   - TODO: UCB1, UCT
-- Expansion: pick
-- Simulation or Roll-out: use default policy ot produce outcome value
+- Expansion: add new node to the tree
+- Simulation or Rollout: use default policy to produce outcome value
+  - Choose random action until reach terminal state
 - Backup or Backpropagation: re-update value of nodes along the line trace back
   to root
   - Update reward
   - Update visit count
 
-**Markove Deision Processes (MDP)**
+**Markov Deision Processes (MDP)**
 
 - Framework for planning and maximizing your future gains in scenarios where
   some things are out of your control but you still have choices to make.
@@ -359,11 +367,35 @@ Good at:
 ### References
 
 - [Monte Carlo Tree Search: An Introduction](https://towardsdatascience.com/monte-carlo-tree-search-an-introduction-503d8c04e168)
+- [Monte Carlo Tree Search](https://www.youtube.com/watch?v=UXW2yZndl7U)
 
 ## Markov
 
 Markove Chain: a sequence of random state where future state depends on current
 state only.
+
+## Meta learning and N-shot learning
+
+**Meta learning**: learn to learn
+
+TODO:
+
+- Few-shot learning: kind of Meta learning
+
+**Few-shot learning (FSL)**: N-way-k-shot classification
+
+- N: number of classes
+- K: number of examples per class
+- Each N has K samples
+
+- Have: support set N-K
+- Want: query Q new sample in which class ?
+
+- Few way, more shot to improve accuracy
+
+### References
+
+- [Few-Shot Learning (1/3): Basic Concepts](https://www.youtube.com/watch?v=hE7eGew4eeg)
 
 ## Programming
 
