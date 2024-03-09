@@ -376,13 +376,22 @@ state only.
 
 ## Meta learning and N-shot learning
 
-**Meta learning**: learn to learn
+**Meta learning**: learn to learn aka learn the learning process.
 
-TODO:
+Why: Deep learning require large datasets.
 
-- Few-shot learning: kind of Meta learning
+2 phases:
 
-**Few-shot learning (FSL)**: N-way-k-shot classification
+- Meta-learning phase: Learn from a variety of tasks to get initial parameters.
+- Adaption phase: Adapt to task-specific parameters.
+
+Data:
+
+- The meta-training: train examples (support set) and test examples (query set).
+- The meta-validation and meta-test: same structure as meta-training.
+
+**Few-shot learning (FSL)**: N-way-k-shot classification, to classify new sample
+with only few training samples with labels.
 
 - N: number of classes
 - K: number of examples per class
@@ -393,8 +402,18 @@ TODO:
 
 - Few way, more shot to improve accuracy
 
+**One-shot learning (OSL)**: N-way-1-shot classification. Check similarity
+between two images.
+
+Detech camera face and passport face if same person.
+
+**Zero-shot learning**: categorize new, unseen samples without any training
+samples. Example: put corgi in dog class.
+
 ### References
 
+- [🐣 From zero to research — An introduction to Meta-learning](https://medium.com/huggingface/from-zero-to-research-an-introduction-to-meta-learning-8e16e677f78a)
+- [CS 182: Lecture 21: Part 1: Meta-Learning](https://www.youtube.com/watch?v=h7qyQeXKxZE)
 - [Few-Shot Learning (1/3): Basic Concepts](https://www.youtube.com/watch?v=hE7eGew4eeg)
 
 ## Programming
