@@ -76,7 +76,7 @@ Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 - Use error to calculate delta for each weight
 - Update weight, moving closer to desired output
 
-Loss function (Hàm lỗi) (Hàm mất mát):
+Loss function (Hàm lỗi, Hàm mất mát):
 
 - Mean Square Error (MSE)
 
@@ -98,11 +98,14 @@ Single perceptron can only handle linear, but MLP can handle non-linear easily.
 
 Derivative of sigmoid function: `f'(x) = f(x) * (1 - f(x))`
 
-**Tanh function**: TODO
+**Tanh (tangent hyperbolic) function**: convert input to output in [-1, 1]
+
+- If input is large, output is close to 1
+- If input is small, output is close to -1
 
 **Back Propagation**
 
-- Init weight with small value
+- Init weight with small, random value
 - At each layer
   - Calculate weighted sum of inputs
   - Apply activation function
@@ -111,6 +114,10 @@ Derivative of sigmoid function: `f'(x) = f(x) * (1 - f(x))`
   - Calculate using error function
   - Update weight
 
+Quirk:
+
+- Different init weight can lead to different result
+
 ### References
 
 - [Bài 14: Multi-layer Perceptron và Backpropagation](https://machinelearningcoban.com/2017/02/24/mlp/)
@@ -118,6 +125,7 @@ Derivative of sigmoid function: `f'(x) = f(x) * (1 - f(x))`
 - [Backpropagation, Intuitions](https://cs231n.github.io/optimization-2/)
 - [CS231n Winter 2016: Lecture 4: Backpropagation, Neural Networks 1](https://www.youtube.com/watch?v=i94OvYb6noo)
 - [CS231n Winter 2016: Lecture 5: Neural Networks Part 2](https://www.youtube.com/watch?v=gYpoJMlgyXA)
+- [Activation Functions: Sigmoid vs Tanh](https://www.baeldung.com/cs/sigmoid-vs-tanh-functions)
 
 ## Adam Algorithm
 
@@ -300,8 +308,8 @@ Concepts:
 - Expected return:
   - Consider choice of policy and any reward measure.
   - Select a policy which maximizes expected return.
-- Value of a state is total amout reward an agents **hope** to accumulate in the
-  future.
+- Value of a state is total amount reward the agent **hope** to accumulate in
+  the future.
   - Value function may find most suitable solution for specific contexts that
     have trade-off.
   - We care about value than reward, of course determine value is harder than
@@ -318,7 +326,26 @@ Good at:
 
 - Games like chess, go.
 
-**Monte Carlo tree search**: combine tree search and random sampling.
+**Minimax**: explores all notes available. Hard to scale.
+
+**Monte Carlo tree search (MCTS)**: combine tree search and random sampling.
+
+> Essentially, MCTS uses Monte Carlo simulation to accumulate value estimates to
+> guide towards highly rewarding trajectories in the search tree. In other
+> words, MCTS pays more attention to nodes that are more promising, so it avoids
+> having to brute force all possibilities which is impractical to do.
+
+4 steps loop in constrained timd ans space:
+
+- Selection: Using tree policy
+  - Need to balance between exploration and exploitation
+  - TODO: UCB1, UCT
+- Expansion: pick
+- Simulation or Roll-out: use default policy ot produce outcome value
+- Backup or Backpropagation: re-update value of nodes along the line trace back
+  to root
+  - Update reward
+  - Update visit count
 
 **Markove Deision Processes (MDP)**
 
@@ -328,6 +355,15 @@ Good at:
   on the history of previous states and actions
 
 **Model-Based Learning**
+
+### References
+
+- [Monte Carlo Tree Search: An Introduction](https://towardsdatascience.com/monte-carlo-tree-search-an-introduction-503d8c04e168)
+
+## Markov
+
+Markove Chain: a sequence of random state where future state depends on current
+state only.
 
 ## Programming
 
