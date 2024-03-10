@@ -434,3 +434,8 @@ samples. Example: put corgi in dog class.
 
 - [NumPy fundamentals](https://numpy.org/doc/stable/user/basics.html)
 - [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
+
+## Don't know where to add
+
+- [What Is ChatGPT Doing … and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
+- [Generative AI Space and the Mental Imagery of Alien Minds](https://writings.stephenwolfram.com/2023/07/generative-ai-space-and-the-mental-imagery-of-alien-minds/)
