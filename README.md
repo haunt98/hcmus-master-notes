@@ -58,7 +58,7 @@ separable.
 Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 
 - Input each node with random weight
-- Sum with bias (threshold)
+- Sum
 - Activation function
 - Calculate delta
 - If wrong re-update weight
