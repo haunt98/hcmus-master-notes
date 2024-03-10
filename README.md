@@ -402,6 +402,17 @@ with only few training samples with labels.
 
 - Few way, more shot to improve accuracy
 
+> The primary goal in traditional Few-Shot frameworks is to learn a similarity
+> function that can map the similarities between the classes in the support and
+> query sets. Similarity functions typically output a probability value for the
+> similarity.
+
+How to train: train and test condition must match
+
+- Train model the way you like to test
+- Want to test 3-way-1-shot, split data into 3-way-1-shot. Training example aka
+  episode: support set and query set.
+
 **One-shot learning (OSL)**: N-way-1-shot classification. Check similarity
 between two images.
 
@@ -412,7 +423,9 @@ samples. Example: put corgi in dog class.
 
 ### References
 
+- [Meta-Learning](https://meta-learning.fastforwardlabs.com/)
 - [🐣 From zero to research — An introduction to Meta-learning](https://medium.com/huggingface/from-zero-to-research-an-introduction-to-meta-learning-8e16e677f78a)
+- [Everything you need to know about Few-Shot Learning](https://blog.paperspace.com/few-shot-learning/)
 - [CS 182: Lecture 21: Part 1: Meta-Learning](https://www.youtube.com/watch?v=h7qyQeXKxZE)
 - [Few-Shot Learning (1/3): Basic Concepts](https://www.youtube.com/watch?v=hE7eGew4eeg)
 
