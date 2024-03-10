@@ -57,11 +57,11 @@ separable.
 
 Perceptron Learning Algorithm (PLA) (Luật huấn luyện perceptron):
 
-- Input `xi` with random weight `wi`
-- Sum: `w0 + w1*x1 + ... + wi*xi`
+- Input each node with random weight
+- Sum with bias (threshold)
 - Activation function
 - Calculate delta
-- If wrong re-update weight: `wi = wi + delta wi`
+- If wrong re-update weight
 
 **Gradient Descent**
 
