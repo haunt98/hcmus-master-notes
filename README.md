@@ -346,7 +346,6 @@ Good at:
 
 - Selection: Using tree policy
   - Need to balance between exploration and exploitation
-  - TODO: UCB1, UCT
 - Expansion: add new node to the tree
 - Simulation or Rollout: use default policy to produce outcome value
   - Choose random action until reach terminal state
