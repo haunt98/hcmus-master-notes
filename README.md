@@ -354,24 +354,36 @@ Good at:
   - Update reward
   - Update visit count
 
-**Markov Deision Processes (MDP)**
-
-- Framework for planning and maximizing your future gains in scenarios where
-  some things are out of your control but you still have choices to make.
-- The future state only depends on the current state and the action taken, not
-  on the history of previous states and actions
-
-**Model-Based Learning**
-
 ### References
 
 - [Monte Carlo Tree Search: An Introduction](https://towardsdatascience.com/monte-carlo-tree-search-an-introduction-503d8c04e168)
 - [Monte Carlo Tree Search](https://www.youtube.com/watch?v=UXW2yZndl7U)
 
-## Markov
+## Hidden Markov Model
 
-Markove Chain: a sequence of random state where future state depends on current
-state only.
+Markov property: future state depends only on current state, ignore past states.
+
+Markov chain: a discrete sequence of states with discrete state space and has
+Markov property.
+
+**Hidden Markov Model (HMM)**
+
+2 parts:
+
+- Hidden states: can not see
+- Observations: can see
+
+Guess hidden state based on observation. Hidden states obey Markov property.
+
+> Every transition to hidden state emits observation symbol
+
+Used for speech recognition, handwriting recognition, ...
+
+### References
+
+- [Introduction to Markov chains](https://towardsdatascience.com/brief-introduction-to-markov-chains-2c8cab9c98ab)
+- [Hidden Markov Model (HMM) — simple explanation in high level](https://towardsdatascience.com/hidden-markov-model-hmm-simple-explanation-in-high-level-b8722fa1a0d5)
+- [A friendly introduction to Bayes Theorem and Hidden Markov Models](https://www.youtube.com/watch?v=kqSzLo9fenk)
 
 ## Meta learning and N-shot learning
 
