@@ -2,6 +2,7 @@
 
 - [Conference rankings](http://portal.core.edu.au/conf-ranks/)
 - [Journal rankings](https://www.scimagojr.com/)
+- [ris2bib](https://www.bruot.org/ris2bib/)
 
 ## [Generating Images with Multimodal Language Models](https://jykoh.com/gill)
 

@@ -385,6 +385,26 @@ Used for speech recognition, handwriting recognition, ...
 - [Hidden Markov Model (HMM) — simple explanation in high level](https://towardsdatascience.com/hidden-markov-model-hmm-simple-explanation-in-high-level-b8722fa1a0d5)
 - [A friendly introduction to Bayes Theorem and Hidden Markov Models](https://www.youtube.com/watch?v=kqSzLo9fenk)
 
+## Clustering
+
+Divide unlabeled data to groups (clusters) based on similarity.
+
+- In same group: similar
+- Between different group: not similar
+
+HAC ?
+
+## References
+
+- [Hierarchical Clustering in Machine Learning](https://www.geeksforgeeks.org/hierarchical-clustering/)
+- [StatQuest: Hierarchical Clustering](https://www.youtube.com/watch?v=7xHsRkOdVwo)
+
+# Tensor
+
+## References
+
+- https://www.youtube.com/watch?v=L35fFDpwIM4
+
 ## Meta learning and N-shot learning
 
 **Meta learning**: learn to learn aka learn the learning process.
