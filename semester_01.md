@@ -392,8 +392,6 @@ Divide unlabeled data to groups (clusters) based on similarity.
 - In same group: similar
 - Between different group: not similar
 
-HAC ?
-
 ## References
 
 - [Hierarchical Clustering in Machine Learning](https://www.geeksforgeeks.org/hierarchical-clustering/)
