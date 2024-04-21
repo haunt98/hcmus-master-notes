@@ -49,3 +49,21 @@ inputs to generate coherent image (and text) outputs.
 
 - [Paper](https://arxiv.org/pdf/2305.17216.pdf)
 - [Code](https://github.com/kohjingyu/gill)
+
+## [STDPboost: A Self-Training Method Basedon Density Peaks and Improved Adaboostfor Semi-Supervised Classification](https://ieeexplore.ieee.org/document/10182234)
+
+STDPboost: self-training method based on density peaks clustering and improved
+Adaboost.
+
+- Density peak clustering (DPC) algorithm is a well-known clustering method
+
+AdaboostSEMI: new ensembed classifier which combines of oversampling techniques
+can generate synthetic labeled samples to improve the labeled set.
+
+New parameter-free strategy (DPCStr) based on DPC: to find high-confidence
+unlabeled samples without parameters.
+
+### References
+
+- [Clustering by fast search and find of density peaks](https://www.science.org/doi/10.1126/science.1242072)
+- [Density peak clustering algorithms: A review on the decade 2014–2023](https://www.sciencedirect.com/science/article/abs/pii/S095741742302362X)
