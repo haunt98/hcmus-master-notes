@@ -67,3 +67,7 @@ unlabeled samples without parameters.
 
 - [Clustering by fast search and find of density peaks](https://www.science.org/doi/10.1126/science.1242072)
 - [Density peak clustering algorithms: A review on the decade 2014–2023](https://www.sciencedirect.com/science/article/abs/pii/S095741742302362X)
+
+## [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+Attention(Q, K, V)
